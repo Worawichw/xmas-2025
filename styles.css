@@ -1,28 +1,70 @@
 @font-face {
-  font-family: myFont; 
-  src: url(fonts/MiPancakeThin.ttf); 
+  font-family: FontThin; 
+  src: url('fonts/MiPancakeThin.ttf'); 
+}
+
+@font-face {
+  font-family: Font; 
+  src: url('fonts/MiPancake.ttf'); 
+}
+
+@font-face {
+  font-family: FontBold; 
+  src: url('fonts/MiPancakeBold.ttf'); 
 }
 
 body {
-    background-image: url('bg_img.jpg');
+    background-image: url('assets/bg_img2.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+}
+
+.text {
+    text-align: center;
+}
+
+#upper {
+    font-family: FontThin, sans-serif;    
+    color: white;
+    font-size: 5rem;
+    text-shadow: rgb(170, 5, 76) 2px 2px 4px;
+    margin: 0px;
+}
+.button-div{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 16px;
     
 }
 
+.button {
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    height: 70px;
+    border-radius: 16px;
+    border: none;
+    transition: 0.3s;
+}
 
-#upper {
-    font-family: myFont, sans-serif;    
-    color: white;
-    text-align: center;
-    font-size: 5rem;
-    text-shadow: #ff0000 2px 2px 4px;
-    margin: auto ;
+#button_text {
+    display: flex;
+    font-family: FontBold, sans-serif;
+    font-size: 2rem;
+    justify-content: center;
+    padding-bottom: 8px;
+}
+
+button:active{
+    background-color:rgb(237, 149, 170);
+    transform: scale(1.05);
 }
 
 @media (max-width: 600px) {
     body {
-        background-image: url('bg_img.jpg');
+        background-image: url('assets/bg_img2.jpg');
         background-size: auto;
         background-position-x: center;
     }
