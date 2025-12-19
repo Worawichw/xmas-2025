@@ -1,0 +1,33 @@
+@font-face {
+  font-family: myFont; 
+  src: url(fonts/MiPancakeThin.ttf); 
+}
+
+body {
+    background-image: url('bg_img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+
+#upper {
+    font-family: myFont, sans-serif;    
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+    text-shadow: #ff0000 2px 2px 4px;
+    margin: auto ;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: url('bg_img.jpg');
+        background-size: auto;
+        background-position-x: center;
+    }
+
+    #upper {
+        font-size: 3rem;
+    }
+}
