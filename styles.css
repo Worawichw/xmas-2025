@@ -13,6 +13,10 @@
   src: url('fonts/MiPancakeBold.ttf'); 
 }
 
+body, html {
+  overflow: hidden; 
+}
+
 body {
     background-image: url('assets/bg_img2.jpg');
     background-size: cover;
@@ -29,6 +33,17 @@ body {
     text-shadow: rgb(170, 5, 76) 2px 2px 4px;
     margin: 0px;
 }
+
+.tree-div {
+    position: fixed;
+    left:50%;
+    right:50%;
+    bottom: calc(70px + 16px + 8px);
+    display: flex;
+    justify-content: center;
+    
+}
+
 .button-div{
     position: fixed;
     bottom: 0;
@@ -59,7 +74,7 @@ body {
 
 button:active{
     background-color:rgb(237, 149, 170);
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 @media (max-width: 600px) {
