@@ -3,18 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const displayText = document.getElementById('lower');
     const button = document.getElementById('action_button');
 
-    document.getElementById('content').style.height="0px"
-    document.getElementById('content').style.display="none"
-
-
+    
     function change() {
         num -= 1;
         if (num<=0){
             num=0;
             const content = document.getElementById('content')
-            content.style.height="300px"
-            content.style.display="flex"
-            content.classList.add('pop')
+            content.classList.add('show')
+            
             document.getElementById('non-content').style.filter="blur(8px)"
             button.remove()
         }
