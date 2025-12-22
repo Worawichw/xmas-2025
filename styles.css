@@ -18,7 +18,7 @@ body, html {
 }
 
 body {
-    background-image: url('assets/bg_img2.jpg');
+    background-image: url('assets/px_bg2.png');
     background-size: cover;
 }
 
@@ -34,15 +34,40 @@ body {
     margin: 0px;
 }
 
-.tree-div {
+#lower {
+    display: inline-block;
+    font-family: FontThin, sans-serif;    
+    color: white;
+    font-size: 2rem;
+    text-shadow: rgb(170, 5, 76) 2px 2px 4px;
+    margin: 0px;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pop {
+    animation: pop 0.3s ease;
+}
+
+/*.tree-div {
     position: fixed;
     left:50%;
     right:50%;
     bottom: calc(70px + 16px + 8px);
     display: flex;
     justify-content: center;
-    
 }
+*/
 
 .button-div{
     position: fixed;
@@ -72,19 +97,93 @@ body {
     padding-bottom: 8px;
 }
 
-button:active{
+/*button:active{
     background-color:rgb(237, 149, 170);
-    transform: scale(1.03);
+}*/
+
+@keyframes changebutton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        background-color: rgb(167, 157, 255);
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.changebutton {
+    animation: changebutton 0.5s ease;
 }
 
 @media (max-width: 600px) {
     body {
-        background-image: url('assets/bg_img2.jpg');
+        background-image: url('assets/px_bg2.png');
         background-size: auto;
         background-position-x: center;
+        
     }
 
     #upper {
         font-size: 3rem;
     }
 }
+
+.content {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: beige;
+    border-radius: 15px;
+    width: 90%;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#choose {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 100px;
+    justify-items: center;
+}
+
+#choose-text,#choose-yes,#choose-no {
+    font-family: Font, sans-serif;
+}
+
+#choose-text{
+    color: black;
+    font-size: 3.2rem;
+    margin: 0 0 20 0px;
+}
+#choose_buttons {
+    display: flex;
+    gap: 10px;
+    width: 90%;
+}
+
+#choose-yes, #choose-no {
+    flex: 0.5;   
+    height: 60px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+}
+#choose-yes{
+    background-color: rgb(121, 208, 39);
+    color: white;
+    box-shadow: 2px 2px 3px rgb(46, 141, 22);
+}
+
+#choose-no{
+    background-color: rgb(208, 39, 73);
+    color: white;
+    box-shadow: 2px 2px 3px rgb(141, 22, 46);
+}
+
