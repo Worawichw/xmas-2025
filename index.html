@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A gift from your boyfriend</title>
+    <title>meow</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -13,27 +12,44 @@
         <div id="choose">
             <p id="choose-text">คุณพร้อมจะกดดูมั้ย?</p>
             <div id="choose_buttons">
-                <button id="choose-yes">พร้อม!!!</button>
-                <button id="choose-no">พร้อมแต่สีแดง</button>
+                <button id="choose-yes" onclick="showSecret()">พร้อม!!!</button>
+                <button id="choose-no" onclick="showSecret()">พร้อมแต่สีแดง</button>
             </div>
         </div>
     </div>
     <div id="non-content"> <!--add blur to this-->
         <div class="text">
-            <h1 id="upper">ลองกดดูนะ</h1>
-            <h2 id="lower">count: 10</h2>
+            <h1 id="upper">ลองกดปุ่มดูนะ</h1>
+            <h2 id="lower">กดอีก 10 ครั้ง</h2>
         </div>   
-        <div class="container">
-            <div class="person">
-
-            </div>
+        <div class="person" id="person">
+            <img src="assets/bf.png" id="bf" class="bf">
+            <!--<img src="assets/bf-yay.png" id="bf-yay" class="bf-yay">-->
+            <img src="assets/gf.png" id="gf" class="gf">
+            <!--<img src="assets/gf-yay.png" id="gf-yay" class="gf-yay">-->
         </div>
-        
         <div class="button-div">
-            <button class="button" id="action_button">
+            <button class="button" id="action_button" onclick="triggerConfetti()">
             <span id="button_text">กดๆๆๆ</span>
             </button>
         </div>
     </div>
+    <div id="secret" class="secret">
+        <p id="s1">กูว่าแล้วมึงต้องอ่าน แฮ่ หยอกเล่น</p>
+        <p id="s2">เอาจริงๆก็ไม่มีอะไรหรอก แค่อยากบอกว่าคิดถึงแล้วก้รักนะ ที่เราทำอันนี้ขึ้นมาเพราะอยากลองทำอะไรน่ารักๆให้แล้วก้หาอะไรทำระหว่างปิดเทอมด้วยแหละ <br>แค่นี้ละ55555 ขอบคุณที่อยู่ด้วยกันนะ มาเติบโตไปด้วยกันนะครับ</p>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+        const btn = document.getElementById('action_button')
+        btn.addEventListener("click",() => {
+            confetti({
+                particleCount: 70,
+                spread: 70,
+                origin: { y: 1 },
+                });
+        })
+    </script>
+    
 </body>
 </html>
